@@ -5,9 +5,9 @@
 
 Links:
 
+[Video](https://youtu.be/Kko71ziv4Ik
+)
 [Tech Data](https://aijishu.com/a/1060000000360658)
-
-[Datasheet](https://listenai-docs.oss-cn-beijing.aliyuncs.com/芯片产品部/芯片系统部/芯片系列/CSK6/芯片资料/csk6011b_ai_soc_datasheet_v2.3.pdf?OSSAccessKeyId=LTAI5tLC45GE9Jcu4AJ7Us3g&Expires=1737153669&Signature=KLe88R28sofT%2FrSP9Jj0ILEl38g%3D)
 
 [Docs Center](https://docs2.listenai.com/x/af7lMsf-Scg)
 
