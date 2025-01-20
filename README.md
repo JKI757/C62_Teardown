@@ -1,21 +1,31 @@
 # Retevis C62
 
 
-[Retevis C62](https://www.retevis.com/retevis-c62-5-w-long-range-uv-dual-band-ai-noise-reducation-business-radio-us)
+## [Retevis C62 Offical Web link](https://www.retevis.com/retevis-c62-5-w-long-range-uv-dual-band-ai-noise-reducation-business-radio-us)
 
-Links:
+## Links:
 
-[Video](https://youtu.be/Kko71ziv4Ik
-)
-[Tech Data](https://aijishu.com/a/1060000000360658)
+- [Video](https://youtu.be/Kko71ziv4Ik)
 
-[Docs Center](https://docs2.listenai.com/x/af7lMsf-Scg)
+- [Tech Data](https://aijishu.com/a/1060000000360658)
 
-[git Dev link](https://cloud.listenai.com/CSKG962172/duomotai_ap)
+- [Docs Center](https://docs2.listenai.com/x/af7lMsf-Scg)
 
-[Firmware over UART burn/flash instructions](https://docs2.listenai.com/x/x61KemJ0eYx)
+- [git Dev link](https://cloud.listenai.com/CSKG962172/duomotai_ap)
 
-[SWD Firmware Burn instuctions](https://docs2.listenai.com/x/kOtM5RItJc2)
+- [Firmware over UART burn/flash instructions](https://docs2.listenai.com/x/x61KemJ0eYx)
+
+- [SWD Firmware Burn instuctions](https://docs2.listenai.com/x/kOtM5RItJc2)
+
+## Docker development
+- [SDK](https://docs2.listenai.com/x/xfI6rkDCKmW)
+- [Docker Dev UDEV instructions](https://docs2.listenai.com/x/ZPt-N8iM3FU#linux系统下无法识别到csk-usb设备)
+- [Docker Dev FAQ](https://docs2.listenai.com/x/ZPt-N8iM3FU#linux-系统docker环境csk6集成开发环境常见问题及解决方法)
+- Docs are incorrect on the exact format of the docker run command, see below for the correct command.
+- The --platform linux/amd64 option is only required if you're using an M series Mac.  
+- docker pull --platform linux/amd64 listenai/csk6
+- docker run --platform linux/amd64 --privileged -v /dev:/dev -v /run/udev:/run/udev -it listenai/csk6:latest
+
 
 Pics / dissassembly instructions: 
 
