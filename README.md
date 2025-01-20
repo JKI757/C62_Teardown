@@ -27,7 +27,7 @@
 - docker run --platform linux/amd64 --privileged -v /dev:/dev -v /run/udev:/run/udev -it listenai/csk6:latest
 
 
-Pics / dissassembly instructions: 
+## Pics / dissassembly instructions: 
 
 Take out the four screws in the corners:
 ![img](./Photos/dissassembly_1.jpeg)
