@@ -2,7 +2,7 @@
 |------------|----------|--------------|------------|---------|
 | 1 | GPIO_A_11 | | | |
 | 2 | GPIO_A_12 | | | |
-| 3 | GPIO_A_13 | | | |
+| 3 | GPIO_A_13 | BK4819 | 25 | SCK |
 | 4 | GPIO_A_14 | | | |
 | 5 | GPIO_A_15 | Primary PTT | - | |
 | 6 | GPIO_A_16 | | | |
@@ -47,7 +47,7 @@
 | 45 | VBK_SW | | | |
 | 46 | VBK_IN | | | |
 | 47 | GPIO_A_00/SWDCLK | | | |
-| 48 | GPIO_A_01/SWDTMS | LN484 | 1 | SD |
+| 48 | GPIO_A_01/SWDTMS | LN4898 | 1 | SD |
 | 49 | GPIO_A_02 | | | |
 | 50 | GPIO_A_03 | | | |
 | 51 | GPIO_A_04 | | | |
@@ -60,8 +60,8 @@
 | 58 | FLASH_HOLD_N | PY25Q32HB | 7 | HOLD#/RESET# |
 | 59 | FLASH_CLK | PY25Q32HB | 6 | CLK |
 | 60 | FLASH_MOSI | PY25Q32HB | 5 | SI |
-| 61 | GPIO_A_07 | | | |
-| 62 | GPIO_A_08 | | | |
+| 61 | GPIO_A_07 | BK4819 | 27 | SDATA |
+| 62 | GPIO_A_08 | BK4819 | 26 | SCN |
 | 63 | GPIO_A_09 | | | |
 | 64 | GPIO_A_10 | | | |
 | 65 | EPAD | | | |
