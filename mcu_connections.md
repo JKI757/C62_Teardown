@@ -2,9 +2,9 @@
 |------------|----------|--------------|------------|---------|
 | 1 | GPIO_A_11 | | | |
 | 2 | GPIO_A_12 | | | |
-| 3 | GPIO_A_13 | | | |
+| 3 | GPIO_A_13 | BK4819 | 25 | SCK |
 | 4 | GPIO_A_14 | | | |
-| 5 | GPIO_A_15 | | | |
+| 5 | GPIO_A_15 | Primary PTT | - | |
 | 6 | GPIO_A_16 | | | |
 | 7 | GPIO_A_17 | | | |
 | 8 | GPIO_A_18 | | | |
@@ -15,7 +15,7 @@
 | 13 | VDD_CORE_2 | | | |
 | 14 | GPIO_B_09/GPADC_3 | | | |
 | 15 | GPIO_B_08/GPADC_2 | | | |
-| 16 | GPIO_B_07/GPADC_1 | | | |
+| 16 | GPIO_B_07/GPADC_1 | 4032A | 16 | IC could be the charging controller / voltage regulator, since it's connected to the batteries + and - terminals |
 | 17 | GPIO_B_06/GPADC_0 | | | |
 | 18 | TST | | | |
 | 19 | RESETN | | | |
@@ -23,7 +23,7 @@
 | 21 | GPIO_B_04 | | | |
 | 22 | GPIO_B_03 | | | |
 | 23 | GPIO_B_02/CBT_2 | | | |
-| 24 | GPIO_B_01/CBT_1 | | | |
+| 24 | GPIO_B_01/CBT_1 | Secondary PTT | - | |
 | 25 | GPIO_B_00/CBT_0 | | | |
 | 26 | XTAL_OUT | JWT 24C12 |  | |
 | 27 | XTAL_IN | JWT 24C12 | | |
@@ -47,7 +47,7 @@
 | 45 | VBK_SW | | | |
 | 46 | VBK_IN | | | |
 | 47 | GPIO_A_00/SWDCLK | | | |
-| 48 | GPIO_A_01/SWDTMS | | | |
+| 48 | GPIO_A_01/SWDTMS | LN4898 | 1 | SD |
 | 49 | GPIO_A_02 | | | |
 | 50 | GPIO_A_03 | | | |
 | 51 | GPIO_A_04 | | | |
@@ -60,8 +60,8 @@
 | 58 | FLASH_HOLD_N | PY25Q32HB | 7 | HOLD#/RESET# |
 | 59 | FLASH_CLK | PY25Q32HB | 6 | CLK |
 | 60 | FLASH_MOSI | PY25Q32HB | 5 | SI |
-| 61 | GPIO_A_07 | | | |
-| 62 | GPIO_A_08 | | | |
+| 61 | GPIO_A_07 | BK4819 | 27 | SDATA |
+| 62 | GPIO_A_08 | BK4819 | 26 | SCN |
 | 63 | GPIO_A_09 | | | |
 | 64 | GPIO_A_10 | | | |
 | 65 | EPAD | | | |
