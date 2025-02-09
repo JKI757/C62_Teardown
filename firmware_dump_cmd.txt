@@ -1,0 +1,1 @@
+./build/cskburn/cskburn --read "0x0000000:4096000:app.bin" -C 6 -b 115200 -v -s /dev/ttyUSB0
