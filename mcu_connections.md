@@ -62,8 +62,8 @@
 | 60 | FLASH_MOSI | PY25Q32HB | 5 | SI |
 | 61 | GPIO_A_07 | BK4819 | 27 | SDATA - SPI1?| SPI_0_CLK / SPI_1_MOSI
 | 62 | GPIO_A_08 | BK4819 | 26 | SCN - SPI1? | SPI_0_CS / SPI_1_CLK
-| 63 | GPIO_A_09 | Display SPI | ??? | SPI0? | SPI_0_MISO / SPI_1_CS
-| 64 | GPIO_A_10 | Display SPI | ??? | SPI0? | SPI_0_MOSI / SPI_1_MISO
+| 63 | GPIO_A_09 | Display SPI | ??? | SPI0? | SPI_0_MISO / SPI_1_CS / I2C_0_SDA
+| 64 | GPIO_A_10 | Display SPI | ??? | SPI0? | SPI_0_MOSI / SPI_1_MISO / I2C_0_SCL
 | 65 | EPAD | | | |
 
 
