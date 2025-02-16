@@ -35,11 +35,11 @@
 | 33 | VREF | | | |
 | 34 | VMID | | | |
 | 35 | MICBIAS0 | | | |
-| 36 | LIN_R_P | BK4819 | 13 | MICN |
+| 36 | LIN_R_P | BK4819 | 13 | MICN | ARM Analog Out
 | 37 | LIN_L_P | | | |
 | 38 | MIC0_P |MIC | | |
 | 39 | MIC0_N | | | |
-| 40 | MIC1_P | BK4819 | 8 | EARO |
+| 40 | MIC1_P | BK4819 | 8 | EARO | ARM Analog In
 | 41 | MIC1_N | | | |
 | 42 | VDD_CORE | | | |
 | 43 | VDD_IO2 | | | |
@@ -60,10 +60,10 @@
 | 58 | FLASH_HOLD_N | PY25Q32HB | 7 | HOLD#/RESET# |
 | 59 | FLASH_CLK | PY25Q32HB | 6 | CLK |
 | 60 | FLASH_MOSI | PY25Q32HB | 5 | SI |
-| 61 | GPIO_A_07 | BK4819 | 27 | SDATA - SPI1?|
-| 62 | GPIO_A_08 | BK4819 | 26 | SCN - SPI1? |
-| 63 | GPIO_A_09 | Display SPI | ??? | SPI0? |
-| 64 | GPIO_A_10 | Display SPI | ??? | SPI0? |
+| 61 | GPIO_A_07 | BK4819 | 27 | SDATA - SPI1?| SPI_0_CLK / SPI_1_MOSI
+| 62 | GPIO_A_08 | BK4819 | 26 | SCN - SPI1? | SPI_0_CS / SPI_1_CLK
+| 63 | GPIO_A_09 | Display SPI | ??? | SPI0? | SPI_0_MISO / SPI_1_CS
+| 64 | GPIO_A_10 | Display SPI | ??? | SPI0? | SPI_0_MOSI / SPI_1_MISO
 | 65 | EPAD | | | |
 
 
