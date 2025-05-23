@@ -1,12 +1,9 @@
+
 | Pin Number | Pin Name | Connected To | Pin Number | Comment |
 |------------|----------|--------------|------------|---------|
-| 1 | GPIO_A_11 | Display SPI | ??? | SPI 0? // SPI_0_CLK / SPI_1_MOSI| 
-| 2 | GPIO_A_12 | Display SPI | ??? | SPI 0? // SPI_0_CS / SPI_1_CLK | 
-| 63 | GPIO_A_09 | Display SPI | ??? | SPI0? // SPI_0_MISO / SPI_1_CS / I2C_0_SDA| 
-| 64 | GPIO_A_10 | Display SPI | ??? | SPI0? // SPI_0_MOSI / SPI_1_MISO / I2C_0_SCL| 
+| 1 | GPIO_A_11 | Display SPI | 13 | SPI_1_MOSI | 
+| 2 | GPIO_A_12 | Display SPI | ??? | SPI_1_CLK | 
 | 3 | GPIO_A_13 | BK4819 | 25 | SCK - SPI 1? // SPI_0_MISO / SPI_1_CS| 
-| 62 | GPIO_A_08 | BK4819 | 26 | SCN - SPI1? // SPI_0_CS / SPI_1_CLK| 
-| 61 | GPIO_A_07 | BK4819 | 27 | SDATA - SPI1? // SPI_0_CLK / SPI_1_MOSI| 
 | 4 | GPIO_A_14 | | | |
 | 5 | GPIO_A_15 | Primary PTT | - | Boot Mode UART RXD |
 | 6 | GPIO_A_16 | | | |
@@ -18,18 +15,18 @@
 | 12 | GPIO_B_10/USB_DP | | | |
 | 13 | VDD_CORE_2 | | | |
 | 14 | GPIO_B_09/GPADC_3 | | | |
-| 15 | GPIO_B_08/GPADC_2 | SPK? | | |
-| 16 | GPIO_B_07/GPADC_1 | 4032A | 16 | IC could be the charging controller / voltage regulator, since it's connected to the batteries + and - terminals |
-| 17 | GPIO_B_06/GPADC_0 | | | |
+| 15 | GPIO_B_08/GPADC_2 | Battery | | BAT_DET |
+| 16 | GPIO_B_07/GPADC_1 | 4032A | 16 | Battery Charging Detect |
+| 17 | GPIO_B_06/GPADC_0 | Key Matrix | D9 | |
 | 18 | TST | | | |
 | 19 | RESETN | | | |
 | 20 | GPIO_B_05/KEYSENSE | Flashlight! | | |
 | 21 | GPIO_B_04 | Green Led | | |
-| 22 | GPIO_B_03 | | | |
-| 23 | GPIO_B_02/CBT_2 | | | |
-| 24 | GPIO_B_01/CBT_1 | Secondary PTT | - | Boot Mode Control |
-| 25 | GPIO_B_00/CBT_0 | | | Boot Mode Control |
-| 26 | XTAL_OUT | JWT 24C12 |  | |
+| 22 | GPIO_B_03 | Keypad Lights | | |
+| 23 | GPIO_B_02/CBT_2 | BK1080 | 2 | FM POWER |
+| 24 | GPIO_B_01/CBT_1 | Secondary PTT | - | Pulled up w/10K resistor |
+| 25 | GPIO_B_00/CBT_0 | ET3157 | 6 | DT_EN (DTMF Enable). Also pulled up 10K |
+| 26 | XTAL_OUT | JWT 24C12 |  | |
 | 27 | XTAL_IN | JWT 24C12 | | |
 | 28 | VDD_AON | | | |
 | 29 | VCC | | | |
@@ -38,13 +35,13 @@
 | 32 | AVDD_AUD | | | |
 | 33 | VREF | | | |
 | 34 | VMID | | | |
-| 35 | MICBIAS0 | | | |
+| 35 | MICBIAS0 | Microphone + | | |
 | 36 | LIN_R_P | BK4819 | 13 | MICN | ARM Analog Out
-| 37 | LIN_L_P | | | |
-| 38 | MIC0_P |MIC | | |
-| 39 | MIC0_N | | | |
+| 37 | LIN_L_P | ET3157 | 3 | MCU Audio Output into Analog Switcher |
+| 38 | MIC0_P | Microphone + | | |
+| 39 | MIC0_N | GND | | |
 | 40 | MIC1_P | BK4819 | 8 | EARO | ARM Analog In
-| 41 | MIC1_N | | | |
+| 41 | MIC1_N | GND | | |
 | 42 | VDD_CORE | | | |
 | 43 | VDD_IO2 | | | |
 | 44 | VBK_PVSS | | | |
@@ -52,19 +49,23 @@
 | 46 | VBK_IN | | | |
 | 47 | GPIO_A_00/SWDCLK | | | |
 | 48 | GPIO_A_01/SWDTMS | LN4898 | 1 | SD |
-| 49 | GPIO_A_02 | Display | Enable | |
-| 50 | GPIO_A_03 | | | |
-| 51 | GPIO_A_04 | | | |
-| 52 | GPIO_A_05 | | | |
-| 53 | GPIO_A_06 | | | |
+| 49 | GPIO_A_02 | Display Backlight LED | 20 | PWM |
+| 50 | GPIO_A_03 | APC (Auto Power Control) | | |
+| 51 | GPIO_A_04 | BK1080 | | I2C CLK |
+| 52 | GPIO_A_05 | BK1080 | | I2C CLK |
+| 53 | GPIO_A_06 | BK1080 | | I2C DATA |
 | 54 | FLASH_WP_N | PY25Q32HB | 3 | WP# |
 | 55 | FLASH_MISO | PY25Q32HB | 2 | SO |
 | 56 | FLASH_CS_N | PY25Q32HB | 1 | CS# |
-| 57 | VDD_IO_1 | | | |
+| 57 | VDD_IO_1 | | | 3V3_MCU |
 | 58 | FLASH_HOLD_N | PY25Q32HB | 7 | HOLD#/RESET# |
 | 59 | FLASH_CLK | PY25Q32HB | 6 | CLK |
 | 60 | FLASH_MOSI | PY25Q32HB | 5 | SI |
-| 65 | EPAD | | | |
+| 61 | GPIO_A_07 | LM4898 | 1 | CE/SP_EN (Speaker_Enable)|
+| 62 | GPIO_A_08 | BK4819 | 26 | SCN (Chip Select) |
+| 63 | GPIO_A_09 | Display SPI | 18 | Chip Select/RW |
+| 64 | GPIO_A_10 | Display SPI | 15 | Reset |
+| 65 | EPAD | | | GND |
 
 
 BK4819
