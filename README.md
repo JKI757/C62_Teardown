@@ -64,8 +64,7 @@ Debug pads on the opposite side of the CSK6011B:
 
 ## Reverse Engineering
 - It is possible to download the firmware from the radio, at least in the versions that we have seen.
-- cskburn is broken in the official repo for reading firmware.  In order to use it, you need to download Andy's (OE3ANC) fork of the official tool from: [OE3ANC cskburn](https://github.com/OE3ANC/cskburn)
-- Once you have built that tool, the command line to download the radio is: ```cskburn --read "0x0000000:4096000:app.bin" -C 6 -b 115200 -v -s {your usb or serial device}```
+- Once you have built that tool, the command line to download the radio is: ```cskburn --read "0x0000000:4194304:app.bin" -C 6 -b 115200 -v -s {your usb or serial device}```
 - The only cable I was able to make work with the radio was the TalkPod A36 programming cable, and that required downloading drivers from the manufacturer.  YMMV, the Retevis cable should work but I didn't have it at the time.  
 - I have not yet been able to put together a reasonable memory map that allows me to study the decompiled code thoroughly.  It does decompile using ghidra's armv8-LE processor definitions, but I do not believe that is actually a fully accurate processor file for this chip.  
 - PRs are welcome, especially if you know how to properly decompile code built for the listenai CSK6011B chip.  
